@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Reserva {
+  id Int @id @default(autoincrement())
+  name String @unique
+  data Int 
+  time Int 
+  n_people Int 
+  t_position Int
+}
