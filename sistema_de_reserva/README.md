@@ -11,6 +11,7 @@ As rotas da API foi configurada como /create-reservation e /view-reservation?dat
   - time
   - number_of_people
   - table_number
+
 Após isso, ele processa essas informações jogando-as no banco de dados PostgreSQL. Logo após esse processo, o usuário é encaminhado para uma página
     dizendo "Reserva realizada com sucesso.".
 
