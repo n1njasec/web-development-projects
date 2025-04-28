@@ -1,7 +1,9 @@
-import Image from "next/image";
+import { FormComponent } from "./components/form";
 
 export default function Home() {
   return (
-    <>A</>
+    <>
+      <FormComponent />
+    </>
   );
 }

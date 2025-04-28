@@ -883,90 +883,82 @@ export namespace Prisma {
 
   export type ReservaAvgAggregateOutputType = {
     id: number | null
-    data: number | null
-    time: number | null
-    n_people: number | null
-    t_position: number | null
+    number_of_people: number | null
+    table_number: number | null
   }
 
   export type ReservaSumAggregateOutputType = {
     id: number | null
-    data: number | null
-    time: number | null
-    n_people: number | null
-    t_position: number | null
+    number_of_people: number | null
+    table_number: number | null
   }
 
   export type ReservaMinAggregateOutputType = {
     id: number | null
     name: string | null
-    data: number | null
-    time: number | null
-    n_people: number | null
-    t_position: number | null
+    date: string | null
+    time: string | null
+    number_of_people: number | null
+    table_number: number | null
   }
 
   export type ReservaMaxAggregateOutputType = {
     id: number | null
     name: string | null
-    data: number | null
-    time: number | null
-    n_people: number | null
-    t_position: number | null
+    date: string | null
+    time: string | null
+    number_of_people: number | null
+    table_number: number | null
   }
 
   export type ReservaCountAggregateOutputType = {
     id: number
     name: number
-    data: number
+    date: number
     time: number
-    n_people: number
-    t_position: number
+    number_of_people: number
+    table_number: number
     _all: number
   }
 
 
   export type ReservaAvgAggregateInputType = {
     id?: true
-    data?: true
-    time?: true
-    n_people?: true
-    t_position?: true
+    number_of_people?: true
+    table_number?: true
   }
 
   export type ReservaSumAggregateInputType = {
     id?: true
-    data?: true
-    time?: true
-    n_people?: true
-    t_position?: true
+    number_of_people?: true
+    table_number?: true
   }
 
   export type ReservaMinAggregateInputType = {
     id?: true
     name?: true
-    data?: true
+    date?: true
     time?: true
-    n_people?: true
-    t_position?: true
+    number_of_people?: true
+    table_number?: true
   }
 
   export type ReservaMaxAggregateInputType = {
     id?: true
     name?: true
-    data?: true
+    date?: true
     time?: true
-    n_people?: true
-    t_position?: true
+    number_of_people?: true
+    table_number?: true
   }
 
   export type ReservaCountAggregateInputType = {
     id?: true
     name?: true
-    data?: true
+    date?: true
     time?: true
-    n_people?: true
-    t_position?: true
+    number_of_people?: true
+    table_number?: true
     _all?: true
   }
 
@@ -1059,10 +1051,10 @@ export namespace Prisma {
   export type ReservaGroupByOutputType = {
     id: number
     name: string
-    data: number
-    time: number
-    n_people: number
-    t_position: number
+    date: string
+    time: string
+    number_of_people: number
+    table_number: number
     _count: ReservaCountAggregateOutputType | null
     _avg: ReservaAvgAggregateOutputType | null
     _sum: ReservaSumAggregateOutputType | null
@@ -1087,40 +1079,40 @@ export namespace Prisma {
   export type ReservaSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    data?: boolean
+    date?: boolean
     time?: boolean
-    n_people?: boolean
-    t_position?: boolean
+    number_of_people?: boolean
+    table_number?: boolean
   }, ExtArgs["result"]["reserva"]>
 
   export type ReservaSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    data?: boolean
+    date?: boolean
     time?: boolean
-    n_people?: boolean
-    t_position?: boolean
+    number_of_people?: boolean
+    table_number?: boolean
   }, ExtArgs["result"]["reserva"]>
 
   export type ReservaSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     name?: boolean
-    data?: boolean
+    date?: boolean
     time?: boolean
-    n_people?: boolean
-    t_position?: boolean
+    number_of_people?: boolean
+    table_number?: boolean
   }, ExtArgs["result"]["reserva"]>
 
   export type ReservaSelectScalar = {
     id?: boolean
     name?: boolean
-    data?: boolean
+    date?: boolean
     time?: boolean
-    n_people?: boolean
-    t_position?: boolean
+    number_of_people?: boolean
+    table_number?: boolean
   }
 
-  export type ReservaOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "data" | "time" | "n_people" | "t_position", ExtArgs["result"]["reserva"]>
+  export type ReservaOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "date" | "time" | "number_of_people" | "table_number", ExtArgs["result"]["reserva"]>
 
   export type $ReservaPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Reserva"
@@ -1128,10 +1120,10 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: number
       name: string
-      data: number
-      time: number
-      n_people: number
-      t_position: number
+      date: string
+      time: string
+      number_of_people: number
+      table_number: number
     }, ExtArgs["result"]["reserva"]>
     composites: {}
   }
@@ -1557,10 +1549,10 @@ export namespace Prisma {
   interface ReservaFieldRefs {
     readonly id: FieldRef<"Reserva", 'Int'>
     readonly name: FieldRef<"Reserva", 'String'>
-    readonly data: FieldRef<"Reserva", 'Int'>
-    readonly time: FieldRef<"Reserva", 'Int'>
-    readonly n_people: FieldRef<"Reserva", 'Int'>
-    readonly t_position: FieldRef<"Reserva", 'Int'>
+    readonly date: FieldRef<"Reserva", 'String'>
+    readonly time: FieldRef<"Reserva", 'String'>
+    readonly number_of_people: FieldRef<"Reserva", 'Int'>
+    readonly table_number: FieldRef<"Reserva", 'Int'>
   }
     
 
@@ -1944,10 +1936,10 @@ export namespace Prisma {
   export const ReservaScalarFieldEnum: {
     id: 'id',
     name: 'name',
-    data: 'data',
+    date: 'date',
     time: 'time',
-    n_people: 'n_people',
-    t_position: 't_position'
+    number_of_people: 'number_of_people',
+    table_number: 'table_number'
   };
 
   export type ReservaScalarFieldEnum = (typeof ReservaScalarFieldEnum)[keyof typeof ReservaScalarFieldEnum]
@@ -2025,19 +2017,19 @@ export namespace Prisma {
     NOT?: ReservaWhereInput | ReservaWhereInput[]
     id?: IntFilter<"Reserva"> | number
     name?: StringFilter<"Reserva"> | string
-    data?: IntFilter<"Reserva"> | number
-    time?: IntFilter<"Reserva"> | number
-    n_people?: IntFilter<"Reserva"> | number
-    t_position?: IntFilter<"Reserva"> | number
+    date?: StringFilter<"Reserva"> | string
+    time?: StringFilter<"Reserva"> | string
+    number_of_people?: IntFilter<"Reserva"> | number
+    table_number?: IntFilter<"Reserva"> | number
   }
 
   export type ReservaOrderByWithRelationInput = {
     id?: SortOrder
     name?: SortOrder
-    data?: SortOrder
+    date?: SortOrder
     time?: SortOrder
-    n_people?: SortOrder
-    t_position?: SortOrder
+    number_of_people?: SortOrder
+    table_number?: SortOrder
   }
 
   export type ReservaWhereUniqueInput = Prisma.AtLeast<{
@@ -2046,19 +2038,19 @@ export namespace Prisma {
     AND?: ReservaWhereInput | ReservaWhereInput[]
     OR?: ReservaWhereInput[]
     NOT?: ReservaWhereInput | ReservaWhereInput[]
-    data?: IntFilter<"Reserva"> | number
-    time?: IntFilter<"Reserva"> | number
-    n_people?: IntFilter<"Reserva"> | number
-    t_position?: IntFilter<"Reserva"> | number
+    date?: StringFilter<"Reserva"> | string
+    time?: StringFilter<"Reserva"> | string
+    number_of_people?: IntFilter<"Reserva"> | number
+    table_number?: IntFilter<"Reserva"> | number
   }, "id" | "name">
 
   export type ReservaOrderByWithAggregationInput = {
     id?: SortOrder
     name?: SortOrder
-    data?: SortOrder
+    date?: SortOrder
     time?: SortOrder
-    n_people?: SortOrder
-    t_position?: SortOrder
+    number_of_people?: SortOrder
+    table_number?: SortOrder
     _count?: ReservaCountOrderByAggregateInput
     _avg?: ReservaAvgOrderByAggregateInput
     _max?: ReservaMaxOrderByAggregateInput
@@ -2072,70 +2064,70 @@ export namespace Prisma {
     NOT?: ReservaScalarWhereWithAggregatesInput | ReservaScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Reserva"> | number
     name?: StringWithAggregatesFilter<"Reserva"> | string
-    data?: IntWithAggregatesFilter<"Reserva"> | number
-    time?: IntWithAggregatesFilter<"Reserva"> | number
-    n_people?: IntWithAggregatesFilter<"Reserva"> | number
-    t_position?: IntWithAggregatesFilter<"Reserva"> | number
+    date?: StringWithAggregatesFilter<"Reserva"> | string
+    time?: StringWithAggregatesFilter<"Reserva"> | string
+    number_of_people?: IntWithAggregatesFilter<"Reserva"> | number
+    table_number?: IntWithAggregatesFilter<"Reserva"> | number
   }
 
   export type ReservaCreateInput = {
     name: string
-    data: number
-    time: number
-    n_people: number
-    t_position: number
+    date: string
+    time: string
+    number_of_people: number
+    table_number: number
   }
 
   export type ReservaUncheckedCreateInput = {
     id?: number
     name: string
-    data: number
-    time: number
-    n_people: number
-    t_position: number
+    date: string
+    time: string
+    number_of_people: number
+    table_number: number
   }
 
   export type ReservaUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
-    data?: IntFieldUpdateOperationsInput | number
-    time?: IntFieldUpdateOperationsInput | number
-    n_people?: IntFieldUpdateOperationsInput | number
-    t_position?: IntFieldUpdateOperationsInput | number
+    date?: StringFieldUpdateOperationsInput | string
+    time?: StringFieldUpdateOperationsInput | string
+    number_of_people?: IntFieldUpdateOperationsInput | number
+    table_number?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservaUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
-    data?: IntFieldUpdateOperationsInput | number
-    time?: IntFieldUpdateOperationsInput | number
-    n_people?: IntFieldUpdateOperationsInput | number
-    t_position?: IntFieldUpdateOperationsInput | number
+    date?: StringFieldUpdateOperationsInput | string
+    time?: StringFieldUpdateOperationsInput | string
+    number_of_people?: IntFieldUpdateOperationsInput | number
+    table_number?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservaCreateManyInput = {
     id?: number
     name: string
-    data: number
-    time: number
-    n_people: number
-    t_position: number
+    date: string
+    time: string
+    number_of_people: number
+    table_number: number
   }
 
   export type ReservaUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
-    data?: IntFieldUpdateOperationsInput | number
-    time?: IntFieldUpdateOperationsInput | number
-    n_people?: IntFieldUpdateOperationsInput | number
-    t_position?: IntFieldUpdateOperationsInput | number
+    date?: StringFieldUpdateOperationsInput | string
+    time?: StringFieldUpdateOperationsInput | string
+    number_of_people?: IntFieldUpdateOperationsInput | number
+    table_number?: IntFieldUpdateOperationsInput | number
   }
 
   export type ReservaUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
-    data?: IntFieldUpdateOperationsInput | number
-    time?: IntFieldUpdateOperationsInput | number
-    n_people?: IntFieldUpdateOperationsInput | number
-    t_position?: IntFieldUpdateOperationsInput | number
+    date?: StringFieldUpdateOperationsInput | string
+    time?: StringFieldUpdateOperationsInput | string
+    number_of_people?: IntFieldUpdateOperationsInput | number
+    table_number?: IntFieldUpdateOperationsInput | number
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -2167,44 +2159,40 @@ export namespace Prisma {
   export type ReservaCountOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
-    data?: SortOrder
+    date?: SortOrder
     time?: SortOrder
-    n_people?: SortOrder
-    t_position?: SortOrder
+    number_of_people?: SortOrder
+    table_number?: SortOrder
   }
 
   export type ReservaAvgOrderByAggregateInput = {
     id?: SortOrder
-    data?: SortOrder
-    time?: SortOrder
-    n_people?: SortOrder
-    t_position?: SortOrder
+    number_of_people?: SortOrder
+    table_number?: SortOrder
   }
 
   export type ReservaMaxOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
-    data?: SortOrder
+    date?: SortOrder
     time?: SortOrder
-    n_people?: SortOrder
-    t_position?: SortOrder
+    number_of_people?: SortOrder
+    table_number?: SortOrder
   }
 
   export type ReservaMinOrderByAggregateInput = {
     id?: SortOrder
     name?: SortOrder
-    data?: SortOrder
+    date?: SortOrder
     time?: SortOrder
-    n_people?: SortOrder
-    t_position?: SortOrder
+    number_of_people?: SortOrder
+    table_number?: SortOrder
   }
 
   export type ReservaSumOrderByAggregateInput = {
     id?: SortOrder
-    data?: SortOrder
-    time?: SortOrder
-    n_people?: SortOrder
-    t_position?: SortOrder
+    number_of_people?: SortOrder
+    table_number?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {

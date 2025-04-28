@@ -9,10 +9,10 @@ datasource db {
 }
 
 model Reserva {
-  id         Int    @id @default(autoincrement())
-  name       String @unique
-  data       Int
-  time       Int
-  n_people   Int
-  t_position Int
+  id               Int    @id @default(autoincrement())
+  name             String @unique
+  date             String
+  time             String
+  number_of_people Int
+  table_number     Int
 }
