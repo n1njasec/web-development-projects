@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Criei esse sistema de reservas baseado em momentos em que trabalhei numa pizzaria e vi que era necessário criar algo do tipo ao invés de ficar fazendo reservas de forma manual.
 
-## Getting Started
+Trata-se de um sistema simples onde um usuário insere informações como nome, data, horário, quantidade de pessoas e a posição da mesa. Essas informações são enviadas para o banco de dados que foi configurado usando o PRISMA ORM. Existe uma rota chamada /dashboard onde o usuário (no caso seria o administrador mas criei sem ter um sistema de autenticação) consegue buscar, através da data do dia, as reservas que foram realizadas.
 
-First, run the development server:
+As rotas da API foi configurada como /create-reservation e /view-reservation?date=.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+#### Explicando /create-reservation:
+- Essa rota captura os valores passados no campo de formulário as seguintes informações.
+  - name
+  - date
+  - time
+  - number_of_people
+  - table_number
+    Após isso, ele processa essas informações jogando-as no banco de dados PostgreSQL. Logo após esse processo, o usuário é encaminhado para uma página
+    dizendo "Reserva realizada com sucesso.".
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Explicando /view-reservation?date=
+- Essa rota faz um filtro através de datas e busca por todas as informações que estão ligadas em uma data específica.
+  Ex: Eu passo o parâmetro https://domain.com/api/view-reservation?date=20/05/2025 e ela retorna todas as informações restantes sobre aquela reserva.
+  Como nome, horário, número de pessoas e o número da mesa...
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+É um projeto simples e as tecnologias usadas foram: **Next.Js**,** Prisma ORM**, **PostgreSQL** e** Tailwind-CSS**.
