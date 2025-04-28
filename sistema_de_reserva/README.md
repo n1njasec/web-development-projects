@@ -21,3 +21,13 @@ Após isso, ele processa essas informações jogando-as no banco de dados Postgr
   Como nome, horário, número de pessoas e o número da mesa...
 
 É um projeto simples e as tecnologias usadas foram: **Next.Js, Prisma ORM, PostgreSQL e Tailwind-CSS**.
+
+#### Como testar o projeto?
+
+```bash
+git clone https://github.com/n1njasec/web-development-projects.git
+cd web-development-projects/sistema_de_reserva
+npm i
+// configure a variável de ambiente .env conforme o DATABASE_URL do seu banco de dados
+npm run dev
+```
